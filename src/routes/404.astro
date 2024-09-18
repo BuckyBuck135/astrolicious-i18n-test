@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getLocale, t } from "i18n:astro"
+
+export const prerender = false;
+
+// const locale = getLocale()
+// const title = t("pageNotFound");
+const title = "Not found"
+---
+
+<Layout {title}>
+  <h1>{title}</h1>
+  <!-- <p>Locale: {locale}</p> -->
+</Layout>
+
+<!-- Readme
+Not using any of the i18n imports returns this error: [ERROR] Using `<I18nClient />` requires adding the `i18n` integration to your Astro config.
+using them returns this error: [ERROR] Cannot read properties of undefined (reading 'data') -->

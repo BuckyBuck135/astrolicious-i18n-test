@@ -1,4 +1,6 @@
 ---
+import I18nClient from "@astrolicious/i18n/components/I18nClient.astro"
+
 interface Props {
 	title: string;
 }
@@ -15,6 +17,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<I18nClient />
 	</head>
 	<body>
 		<slot />
@@ -35,6 +38,7 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
+		color: white;
 	}
 	code {
 		font-family:
